@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="robots" content="noindex, follow">
+      <meta name="viewport" content="width=device-width, user-scalable=no" />
+      
+      <link href="css/boilerplate.css" rel="stylesheet" type="text/css" />
+      <link href="css/style.css" rel="stylesheet" type="text/css"/>
+      <link href="css/editedstyle.css" rel="stylesheet" type="text/css"/>
+
+<link href="css/font-awesome.css" rel="stylesheet" type="text/css">
+
+<link rel="stylesheet" href="css/jquery.mobile-1.3.2.min.css" />	
+		<script src="js/respond.min.js"></script>
+	
+
+		<script src="js/jquery-1.9.1.min.js"></script>
+		<script src="js/jquery.mobile-1.3.2.min.js"></script>
+		<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDY0kkJiTPVd2U7aTOAwhc9ySH6oHxOIYM&sensor=false"></script>
+		<link href="http://vjs.zencdn.net/c/video-js.css" rel="stylesheet">
+<script src="http://vjs.zencdn.net/c/video.js"></script>
+<script type="text/javascript">
+    $(document).bind("mobileinit", function(){
+      //apply overrides here
+      $.mobile.ajaxEnabled=false;
+    });
+  </script>
+		<title>Hello World</title>
+		<script type="text/javascript" src="cordova.js"></script>
+		<script src="js/fastclick.js"></script>
+		<!--<script src="js/SpeechRecognizer.js"></script>-->
+		<script type="text/javascript" src="js/index.js"></script>
+		<script type="text/javascript">
+		    app.initialize();
+		</script>
+    </head>
+  <body>
+ 
+    <div data-role="page" id="Login">
+
+
+      <div data-role="content" >
+	 
+       <div class="gridContainer clearfix">
+  <div id="top-header"><img src="images/logo.png"></div>
+  <div id="login-section">
+    <div id="l1"><img src="images/login-user-img.png"> &nbsp;&nbsp;&nbsp; Please enter your information</div>
+    <div id="l2"></div>
+	
+    <div id="l3">
+      <label for="txtusername"></label>
+      <input type="text" name="txtusername" data-role="none" id="txtusername" placeholder="Username" value="">
+    </div>
+    <div id="l4"><label for="regi_txtpwd"></label>
+      <input type="password" name="txtpwd" data-role="none" id="txtpwd" placeholder="Password" value="">
+    </div>
+    <div id="l5">
+      <input type="submit" name="txtsubmit" data-role="none" id="txtsubmitss" value="LOGIN" onClick="app.logMe()">
+    </div>
+    <div id="l6">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>&larr; <a href="#" title="Forgot password">Forgot password</a></td>
+          <td align="right"><a href="#Register" title="Register">Register &rarr;</a></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+      </div>
+      <!-- /content -->
+
+
+
+    </div>
+    <!-- /page -->
+
+    <div data-role="page" id="Register">
+
+
+   <div data-role="content" >
+        <div class="gridContainer clearfix">
+		
+  <div id="top-header"><img src="images/logo.png"></div>
+  <div id="login-section">
+    <div id="l1"><img src="images/reg-user.png"> &nbsp;&nbsp;&nbsp; New user registration  </div>
+    <div id="l2"></div>
+    <div id="l3">
+      <label for="regi_txtusername"></label>
+      <input type="text" name="txtusername" data-role="none" id="regi_txtusername" placeholder="Username">
+    </div>
+    <div id="l7">
+    <label for="regi_txtemail"></label>
+      <input type="text" name="txtemail" data-role="none" id="regi_txtemail" placeholder="Email Address">
+    </div>
+   
+    
+    <div id="l4"><label for="txtpwd"></label>
+      <input type="password" name="txtpwd" id="regi_txtpwd" data-role="none" placeholder="Password">
+    </div>
+	
+    <div id="l9"><label for="txtcfpwd"></label>
+      <input type="password" name="txtcfpwd" id="txtcfpwd" data-role="none" placeholder="Confirm Password"></div>
+	   <div id="l3"><label for="txtpwdw"></label>
+      <input type="text" name="txtpwdw" id="regi_txtpwdw" data-role="none" value="http://192.168.1.10">
+    </div>
+	 	<div align="center" id="add-event-table">
+					<br><br><br>
+						<h2 style="color:#FFF;">Terms and Conditions:</h2>
+						<input id="cbx_tw297_1" type="checkbox" name="cbx_tw297"
+							value="Yes I Have" checked="checked" data-role="none"/><label for="cbx_tw297_1" style="color:#fff;"> Have you read the Terms and Condition of Use? Yes, I have</label>
+                            <br><br>
+					<h2 style="color:#FFF;">Privacy Policy</h2>
+						<input id="rdo_tw298_1" type="radio" name="rdo_tw298" value="Accept" checked="checked" data-role="none"/>
+							<label for="rdo_tw298_1" data-role="none">Accept</label>
+							<input id="rdo_tw298_2" type="radio" name="rdo_tw298" value="Decline"
+							  data-role="none"/><label for="rdo_tw298_2" data-role="none">Decline</label>
+				</div>
+    <div id="l10"><input type="submit" name="txtsubmit" id="txtsubmit" data-role="none" onClick="app.store()" value="REGISTER"></div>
+    
+    <div id="l6">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>&nbsp;</td>
+          <td align="right"><a href="#loginpage" title="Back to login">Back to login &rarr;</a></td>
+        </tr>
+      </table>
+    </div>
+	
+
+	
+  </div>
+</div>
+
+      <!-- /content -->
+
+</div>
+
+    </div>
+  <div data-role="page" id="Homepage">
+
+	<div data-role="content" style="color:white">
+		<div data-role="navbar" class="nav-glyphish-example" data-grid="c"> 
+			<ul> 
+			    <li><a href="#Categories" id="cat" class="cat" data-icon="custom">Category</a></li> 
+			    <li><a href="#Aboutus" id="about" class="about" data-icon="custom">About Us</a></li> 
+			  
+			    <li><a href="#contactuspage" id="contact" class="contact" data-icon="custom">Contact</a></li>
+			    <li onClick="app.logout()"><a href="#Voice" id="logout" class="logout" data-icon="custom">Logout</a></li> 
+			</ul> 
+		</div> 
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+		
+			 <div id="add-events-section">
+             
+             <h1 style="font-size:3.5em;color: #00bf00;" align="center">R.A.M.S</h1>
+             <table width="100%" border="0" cellspacing="3" cellpadding="3">
+             <tr>
+             		<td align="right">
+                    Remote Automation and Monitoring System
+                    </td>
+                    
+                    <td align="left">
+                    Home Automation System
+                    </td>
+             </tr>
+  <tr>
+    <td align="right">
+     
+    <img src="http://www.futurehomes.ie/wp-content/uploads/2012/05/home_lighting.png" style="border:3px solid gray;"></td>
+    <td align="left">
+    
+    <img src="http://www.futurehomes.ie/wp-content/uploads/2012/05/home_open_plan.png" style="border:3px solid gray;">
+    </td>
+  </tr>
+  
+  <tr>
+</table>
+			
+          <div id="l1">
+          R.A.M.S Which represents Remote Automation and Monitoring System is one of the first in a new line is inexpensive solutions to Home Automation.Designed to be simple to setup and use this system will give you the control and functionality that any home should not be without .
+          </div>  
+            
+          <div id="l1">  
+            
+            <table width="100%" border="0" cellspacing="3" cellpadding="3">
+  <tr>
+    <td align="right"> <span class="label label-info">Device Listing</span> </td>
+    <td align="left">Lists all Devices in your Home.</td>
+  </tr>
+  <tr>
+    <td align="right"> <span class="label label-info">Categories Section</span> </td>
+    <td align="left">Narrows down devices by category.</td>
+  </tr>
+  <tr>
+    <td align="right"> <span class="label label-info">Delay Function</span> </td>
+    <td align="left">Set time for a specific device to be triggered.</td>
+  </tr>
+  <tr>
+    <td align="right"> <span class="label label-info">Voice Recognition</span> </td>
+    <td align="left">Our all new and revolutionary voice recognition software that can trigger any device you wish-By use of your own voice.</td>
+  </tr>
+  <tr>
+    <td colspan="2"> <hr> </td>
+    </tr>
+  <tr>
+  <td colspan="2">Browse our application and if you like what you see the view the About us page and find out how to get one of these systems of your very own.</td>
+    </tr>
+ 
+</table>
+
+
+<table width="100%" border="0" cellspacing="3" cellpadding="3">
+  <tr>
+    <td align="right">
+     <img
+				src="http://www.futurehomes.ie/wp-content/uploads/2012/05/services_29.png"
+				alt="" style="border:3px solid gray;" width="150" height="150"></td>
+    <td align="left">
+    <img
+				src="http://www.futurehomes.ie/wp-content/uploads/2012/05/home_commercial.png"
+				 style="border:3px solid gray;" alt=""  width="150" height="150">
+    </td>
+  </tr>
+  
+  <tr>
+</table>
+			
+          </div>  
+            
+            
+             </div>
+		
+
+	</div>
+	<div data-role="footer" data-position="fixed" data-theme="b">
+		<div data-role="navbar" class="nav-glyphish-example" data-grid="c"> 
+			<ul> 
+			    <li><a href="#homePage" id="home" class="home" data-icon="custom">Home</a></li> 
+			    <li><a href="#listpage" id="cat" class="cat" data-icon="custom">List</a></li> 
+			  
+			    <li><a href="#Delay" id="delay" class="delay" data-icon="custom">Delay</a></li>
+			    <li><a href="#Voice" id="voice" class="voice" data-icon="custom">Voice</a></li> 
+			</ul> 
+		</div> 
+	</div> 
+</div>
+<div data-role="page" id="listpage">
+<div data-role="header" data-position="fixed" data-theme="b">
+			<h1>Device Listing</h1>
+			
+		</div>
+	<div data-role="content" style="padding: 15px !important;color: white;">
+		<div style="text-align: center; font-size:1em;">	Welcome to the device listing page.&nbsp;<br>Below is a full
+			List of all the controlled Items in your home with simple on and off
+			settings.<br>Use either the full list to search through your
+			switches or narrow down your search with our in-built "search
+			functionality".<br>To schedule actions on devices please visit
+			our delay page.<br> </br> </br></div>
+			<ol data-role="listview" data-inset="true" data-filter="true" id="devicelistview">
+				</br>
+				<li data-role="list-divider"><h3>Scheduler</h3> <iframe hidden
+						width="600" height="200" name="tinyFrame" id="tinyFrame"></iframe>
+
+					<p>Schedule an action on a device instead</p></li>
+				
+				<li><a name="?carOn" onClick="nav(this.name)"> Start My Car</a></li>
+				<li><a name="?2on" onClick="nav(this.name)"> Front Door
+						Lock Open</a></li>
+				<li><a name="?2off" onClick="nav(this.name)">Front Door
+						Lock Closed</a></li>
+				<li><a name="?3on" onClick="nav(this.name)">Back Door Lock
+						Open</a></li>
+				<li><a name="?3off" onClick="nav(this.name)">Back Door Lock
+						Closed</a></li>
+				<li><a name="?4on" onClick="nav(this.name)">Heating On</a></li>
+				<li><a name="?4off" onClick="nav(this.name)">Heating Off</a></li>
+				<li><a name="?5on" onClick="nav(this.name)">Air
+						Conditioning On</a></li>
+				<li><a name="?5off" onClick="nav(this.name)">Air
+						Conditioning Off</a></li>
+				<li><a name="?6on" onClick="nav(this.name)">Switch 1 On</a></li>
+				<li><a name="?6off" onClick="nav(this.name)">Switch 1 Off</a></li>
+				<li><a name="?7on" onClick="nav(this.name)">Switch 4</a></li>
+				<li><a name="?7off" onClick="nav(this.name)">Switch 5</a></li>
+				<li><a name="?8on" onClick="nav(this.name)">Outlet 1 On</a></li>
+				<li><a name="?8off" onClick="nav(this.name)">Outlet 1 Off</a></li>
+				<li><a name="?9on" onClick="nav(this.name)">Outlet 2 On</a></li>
+				<li><a name="?9off" onClick="nav(this.name)">Outlet 2 Off</a></li>
+				<li><a name="?10on" onClick="nav(this.name)">Outlet 3 On</a></li>
+				<li><a name="?10off" onClick="nav(this.name)">Outlet 3 Off</a></li>
+				<li><a name="?11on" onClick="nav(this.name)">Outlet 4 On</a></li>
+				<li><a name="?11off" onClick="nav(this.name)">Outlet 4 Off</a></li>
+				<li><a name="?12off" onClick="nav(this.name)">Outlet 5 On</a></li>
+				<li><a name="?12off" onClick="nav(this.name)">Outlet 5 Off</a></li>
+				<li><a name="?13on" onClick="nav(this.name)">Outlet 6 On</a></li>
+				<li><a name="?13off" onClick="nav(this.name)">Outlet 6 Off</a></li>
+				<li><a name="?14on" onClick="nav(this.name)">Outlet 7 On</a></li>
+				<li><a name="?14off" onClick="nav(this.name)">Outlet 7 Off</a></li>
+				<li><a name="?15on" onClick="nav(this.name)">Outlet 8 On</a></li>
+				<li><a name="?16off" onClick="nav(this.name)">Outlet 8 Off</a></li>
+				<li><a name="?17on" onClick="nav(this.name)">Sitting Room
+						Light On</a></li>
+				<li><a name="?17off" onClick="nav(this.name)">Sitting Room
+						Light Off</a></li>
+				<li><a name="?18on" onClick="nav(this.name)">Sitting Room
+						Television On</a></li>
+				<li><a name="?18off" onClick="nav(this.name)">Sitting Room
+						Television Off</a></li>
+				<li><a name="?19on" onClick="nav(this.name)">Kitchen Light
+						On</a></li>
+				<li><a name="?19off" onClick="nav(this.name)">Kitchen Light
+						Off</a></li>
+				<li><a name="?20on" onClick="nav(this.name)">Oven On</a></li>
+				<li><a name="?20off" onClick="nav(this.name)">Oven Off</a></li>
+				<li><a name="?21on" onClick="nav(this.name)">Kitchen
+						Television On</a></li>
+				<li><a name="?21off" onClick="nav(this.name)">Kitchen
+						Television Off</a></li>
+				<li><a name="?22on" onClick="nav(this.name)">Dining Room
+						Light On</a></li>
+				<li><a name="?22off" onClick="nav(this.name)">Dining Room
+						Light Off</a></li>
+				<li><a name="?23off" onClick="nav(this.name)">Dining Room
+						Television Off</a></li>
+				<li><a name="?23on" onClick="nav(this.name)">Landing Light
+						On</a></li>
+				<li><a name="?24off" onClick="nav(this.name)">Landing Light
+						Off</a></li>
+				<li><a name="?24on" onClick="nav(this.name)">Bedroom One
+						Light On</a></li>
+				<li><a name="?24off" onClick="nav(this.name)">Bedroom One
+						Light Off</a></li>
+				<li><a name="?25on" onClick="nav(this.name)">Bedroom Two
+						Light On</a></li>
+				<li><a name="?25off" onClick="nav(this.name)">Bedroom Two
+						Light Off</a></li>
+				<li><a name="?26on" onClick="nav(this.name)">Bedroom Three
+						Light On</a></li>
+				<li><a name="?26off" onClick="nav(this.name)">Bedroom Three
+						Light Off</a></li>
+				<li><a name="?27on" onClick="nav(this.name)">Bedroom Four
+						Light On</a></li>
+				<li><a name="?27off" onClick="nav(this.name)">Bedroom Four
+						Light Off</a></li>
+				<li><a name="?28on" onClick="nav(this.name)">Utility Room
+						Light On</a></li>
+				<li><a name="?28off" onClick="nav(this.name)">Utility Room
+						Light Off</a></li>
+				<li><a name="?29on" onClick="nav(this.name)">Washing
+						MachineOn</a></li>
+				<li><a name="?29off" onClick="nav(this.name)">Washing
+						Machine Off</a></li>
+				<li><a name="?30on" onClick="nav(this.name)">Dryer On</a></li>
+				<li><a name="?30off" onClick="nav(this.name)">Dryer Off</a></li>
+				<li><a name="?31on" onClick="nav(this.name)">Garden
+						Sprinkler System On</a></li>
+				<li><a name="?32off" onClick="nav(this.name)">Garden
+						Sprinkler System Off</a></li>
+			</ol>
+		</div>
+	<div data-role="footer" data-position="fixed" data-theme="b" style="position:fixed;">
+		<div data-role="navbar" class="nav-glyphish-example" data-grid="c"> 
+			<ul> 
+			      <li><a href="#Homepage" id="home" class="home" data-icon="custom">Home</a></li> 
+			    <li><a href="#listpage" id="cat" class="cat" data-icon="custom">List</a></li> 
+			  
+			    <li><a href="#Delay" id="delay" class="delay" data-icon="custom">Delay</a></li>
+			    <li><a href="#Voice" id="voice" class="voice" data-icon="custom">Voice</a></li> 
+			</ul> 
+		</div> 
+	</div> 
+</div>
+<!--contact us page start------------->
+<div data-role="page" id="contactuspage">
+<div data-role="header" data-position="fixed" data-theme="b">
+			<h1>Contactus</h1>
+			
+		</div>
+	<div data-role="content" style="padding: 15px !important;color: white;">
+	<a href="tel:+0906412345" data-theme="" id="ventaOption" data-role="button">
+        <img src="images/phone.jpg" width="26" height="26" style="float:left">
+       
+        0906412345 
+</a>
+<a href="tel:+0906412345" data-theme="" id="ventaOption" data-role="button">
+        <img src="images/fax.png" width="26" height="26" style="float:left">
+       
+        0906412345 
+</a>
+<a href="mailto:name@email.com" data-theme="" id="ventaOption" data-role="button">
+        <img src="images/email.jpg" width="26" height="26" style="float:left">
+       
+       support@ramsautomation.ie 
+</a>
+<div id="map_canvas"></div>
+    </div>
+<div data-role="footer" data-position="fixed" data-theme="b" style="position:fixed;">
+		<div data-role="navbar" class="nav-glyphish-example" data-grid="c"> 
+			<ul> 
+			      <li><a href="#Homepage" id="home" class="home" data-icon="custom">Home</a></li> 
+			    <li><a href="#listpage" id="cat" class="cat" data-icon="custom">List</a></li> 
+			  
+			    <li><a href="#Delay" id="delay" class="delay" data-icon="custom">Delay</a></li>
+			    <li><a href="#Voice" id="voice" class="voice" data-icon="custom">Voice</a></li> 
+			</ul> 
+		</div> 
+	</div> 
+ </div>
+<!--------end page-------------->
+<!--Start about us page---------------------->
+<div id="About Us" data-url="Aboutus" data-role="page">
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<h1>About Us</h1>
+			
+		</div>
+		<div data-role="content" style="padding: 15px !important;color: white;">
+			<br>We are a Software development company based in Athlone
+			County Westmeath,<br> We strive to provide our customers with
+			the latest technologies available while taking cost into account
+			also.<br> We pride Ourselves on our award winning Home
+			Automation Systems and get regular feedback from our customers which
+			<br> is taken into account when devlopment is taking place.<br>
+
+			<video id="my_video_1" controls
+  preload="auto" width="100%" height="300px">
+  <source src="http://www.quirksmode.org/html5/videos/big_buck_bunny.mp4" type='video/mp4'>
+  
+</video>
+
+			<br> <br> Our Company is the market leader in front end
+			application development.....And hopes to be in business for a very
+			long time<br> ,Any feedback on our products or concerns you may
+			have are apreciated and can make a huge difference<br> to the
+			service we provide to you ....The Customer.<br> <br>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b" style="position:fixed;">
+		<div data-role="navbar" class="nav-glyphish-example" data-grid="c"> 
+			<ul> 
+			      <li><a href="#Homepage" id="home" class="home" data-icon="custom">Home</a></li> 
+			    <li><a href="#listpage" id="cat" class="cat" data-icon="custom">List</a></li> 
+			  
+			    <li><a href="#Delay" id="delay" class="delay" data-icon="custom">Delay</a></li>
+			    <li><a href="#Voice" id="voice" class="voice" data-icon="custom">Voice</a></li> 
+			</ul> 
+		</div> 
+	</div> 
+	</div>
+<!-- end about us page--------------------->
+<!----category page start------------------->
+<div id="Categories" data-url="Categories" data-role="page" >
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<h1>Categories</h1>
+			
+		</div>
+		<div data-role="content" style="padding: 15px !important;color: white;">
+			<ul id="categorieslist" data-role="listview" data-inset="true" class="listviewli">
+				<li><a href="#Locks">Locks</a></li>
+				<li><a href="#Heating">Heating</a></li>
+				<li><a href="#AirConditioning">Air Conditioning</a></li>
+				<li><a href="#Outlets">Outlets</a></li>
+				<li><a href="#SittingRoom">Sitting Room</a></li>
+				<li><a href="#Kitchen">Kitchen</a></li>
+				<li><a href="#DiningRoom">Dining Room</a></li>
+				<li><a href="#UpstairsLanding">Upstairs Landing</a></li>
+				<li><a href="#Bedroom1">Bedroom 1</a></li>
+				<li><a href="#Bedroom2">Bedroom 2</a></li>
+				<li><a href="#Bedroom3">Bedroom 3</a></li>
+				<li><a href="#Bedroom4">Bedroom 4</a></li>
+				<li><a href="#UtilityRoom">Utility Room</a></li>
+				<li><a href="#Garden">Garden</a></li>
+			</ul>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b" style="position:fixed;">
+		<div data-role="navbar" class="nav-glyphish-example" data-grid="c"> 
+			<ul> 
+			      <li><a href="#Homepage" id="home" class="home" data-icon="custom">Home</a></li> 
+			    <li><a href="#listpage" id="cat" class="cat" data-icon="custom">List</a></li> 
+			  
+			    <li><a href="#Delay" id="delay" class="delay" data-icon="custom">Delay</a></li>
+			    <li><a href="#Voice" id="voice" class="voice" data-icon="custom">Voice</a></li> 
+			</ul> 
+		</div> 
+	</div> 
+	</div>
+<!----------------endpage-------->
+<!-- start page----------->
+<div id="Locks" data-url="" data-role="page">
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<h1>Locks</h1>
+			
+		</div>
+		<div data-role="content" style="padding: 15px !important;color: white;">
+		<ul data-role="listview" data-inset="true">
+				<li><a name="?2on" onClick="nav(this.name)">Heating On</a></li>
+				<li><a name="?2off" onClick="nav(this.name)">Heating Off</a></li>
+			</ul>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b" style="position:fixed;">
+		<div data-role="navbar" class="nav-glyphish-example" data-grid="c"> 
+			<ul> 
+			      <li><a href="#Homepage" id="home" class="home" data-icon="custom">Home</a></li> 
+			    <li><a href="#listpage" id="cat" class="cat" data-icon="custom">List</a></li> 
+			  
+			    <li><a href="#Delay" id="delay" class="delay" data-icon="custom">Delay</a></li>
+			    <li><a href="#Voice" id="voice" class="voice" data-icon="custom">Voice</a></li> 
+			</ul> 
+		</div> 
+	</div> 
+</div>
+<!------------end page---------->
+
+<!-- start page----------->
+<div id="Heating" data-url="Categories" data-role="page" >
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<h1>Categories</h1>
+			
+		</div>
+		<div data-role="content" style="padding: 15px !important;color: white;">
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b" style="position:fixed;">
+		<div data-role="navbar" class="nav-glyphish-example" data-grid="c"> 
+			<ul> 
+			      <li><a href="#Homepage" id="home" class="home" data-icon="custom">Home</a></li> 
+			    <li><a href="#listpage" id="cat" class="cat" data-icon="custom">List</a></li> 
+			  
+			    <li><a href="#Delay" id="delay" class="delay" data-icon="custom">Delay</a></li>
+			    <li><a href="#Voice" id="voice" class="voice" data-icon="custom">Voice</a></li> 
+			</ul> 
+		</div> 
+	</div> 
+</div>
+<!------------end page---------->
+<!-- start page----------->
+<div id="Categorisses" data-url="Categories" data-role="page" >
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<h1>Categories</h1>
+			
+		</div>
+		<div data-role="content" style="padding: 15px !important;color: white;">
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b" style="position:fixed;">
+		<div data-role="navbar" class="nav-glyphish-example" data-grid="c"> 
+			<ul> 
+			      <li><a href="#Homepage" id="home" class="home" data-icon="custom">Home</a></li> 
+			    <li><a href="#listpage" id="cat" class="cat" data-icon="custom">List</a></li> 
+			  
+			    <li><a href="#Delay" id="delay" class="delay" data-icon="custom">Delay</a></li>
+			    <li><a href="#Voice" id="voice" class="voice" data-icon="custom">Voice</a></li> 
+			</ul> 
+		</div> 
+	</div> 
+</div>
+<!------------end page---------->
+<!-- start page----------->
+<div id="AirConditioning" data-url="" data-role="page" >
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<h1>Categories</h1>
+			
+		</div>
+		<div data-role="content" style="padding: 15px !important;color: white;">
+		<ul data-role="listview" data-inset="true">
+				<li><a name="?2on" onClick="nav(this.name)">Air
+						Conditioning On</a></li>
+				<li><a name="?2off" onClick="nav(this.name)">Air
+						Conditioning Off</a></li>
+			</ul>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b" style="position:fixed;">
+		<div data-role="navbar" class="nav-glyphish-example" data-grid="c"> 
+			<ul> 
+			      <li><a href="#Homepage" id="home" class="home" data-icon="custom">Home</a></li> 
+			    <li><a href="#listpage" id="cat" class="cat" data-icon="custom">List</a></li> 
+			  
+			    <li><a href="#Delay" id="delay" class="delay" data-icon="custom">Delay</a></li>
+			    <li><a href="#Voice" id="voice" class="voice" data-icon="custom">Voice</a></li> 
+			</ul> 
+		</div> 
+	</div> 
+</div>
+<!------------end page---------->
+<!-- start page----------->
+<div id="Outlets" data-url="" data-role="page" >
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<h1>Categories</h1>
+			
+		</div>
+		<div data-role="content" style="padding: 15px !important;color: white;">
+		<ul data-role="listview" data-inset="true">
+				<li><a name="?2on" onClick="nav(this.name)">Outlet One On</a></li>
+				<li><a name="?2off" onClick="nav(this.name)">Outlet One Off</a></li>
+				<li><a name="?2on" onClick="nav(this.name)">Outlet Two On</a></li>
+				<li><a name="?2off" onClick="nav(this.name)">Outlet Two Off</a></li>
+				<li><a name="?2on" onClick="nav(this.name)">Outlet Three On</a></li>
+				<li><a name="?2off" onClick="nav(this.name)">Outlet Three
+						Off</a></li>
+				<li><a name="?2on" onClick="nav(this.name)">Outlet Four On</a></li>
+				<li><a name="?2off" onClick="nav(this.name)">Outlet Four
+						Off</a></li>
+				<li><a name="?2on" onClick="nav(this.name)">Outlet Five On</a></li>
+				<li><a name="?2off" onClick="nav(this.name)">Outlet Five
+						Off</a></li>
+				<li><a name="?2on" onClick="nav(this.name)">Outlet Six On</a></li>
+				<li><a name="?2off" onClick="nav(this.name)">Outlet Six Off</a></li>
+				<li><a name="?2on" onClick="nav(this.name)">Outlet Seven On</a></li>
+				<li><a name="?2off" onClick="nav(this.name)">Outlet Seven
+						Off</a></li>
+				<li><a name="?2on" onClick="nav(this.name)">Outlet Eight On</a></li>
+				<li><a name="?2off" onClick="nav(this.name)">Outlet Eight
+						Off</a></li>
+			</ul>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b" style="position:fixed;">
+		<div data-role="navbar" class="nav-glyphish-example" data-grid="c"> 
+			<ul> 
+			      <li><a href="#Homepage" id="home" class="home" data-icon="custom">Home</a></li> 
+			    <li><a href="#listpage" id="cat" class="cat" data-icon="custom">List</a></li> 
+			  
+			    <li><a href="#Delay" id="delay" class="delay" data-icon="custom">Delay</a></li>
+			    <li><a href="#Voice" id="voice" class="voice" data-icon="custom">Voice</a></li> 
+			</ul> 
+		</div> 
+	</div> 
+</div>
+<!------------end page---------->
+<!-- start page----------->
+<div id="SittingRoom" data-url="" data-role="page" >
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<h1>Categories</h1>
+			
+		</div>
+		<div data-role="content" style="padding: 15px !important;color: white;">
+			<ul data-role="listview" data-inset="true">
+				<li><a name="?2on" onClick="nav(this.name)">Sitting Room
+						Light On</a></li>
+				<li><a name="?2off" onClick="nav(this.name)">Sitting Room
+						Light Off</a></li>
+				<li><a name="?2on" onClick="nav(this.name)">Outlet One On</a></li>
+				<li><a name="?2off" onClick="nav(this.name)">Outlet One Off</a></li>
+				<li><a name="?2on" onClick="nav(this.name)">Sitting Room
+						Television On</a></li>
+				<li><a name="?2off" onClick="nav(this.name)">Sitting Room
+						Television Off</a></li>
+			</ul>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b" style="position:fixed;">
+		<div data-role="navbar" class="nav-glyphish-example" data-grid="c"> 
+			<ul> 
+			      <li><a href="#Homepage" id="home" class="home" data-icon="custom">Home</a></li> 
+			    <li><a href="#listpage" id="cat" class="cat" data-icon="custom">List</a></li> 
+			  
+			    <li><a href="#Delay" id="delay" class="delay" data-icon="custom">Delay</a></li>
+			    <li><a href="#Voice" id="voice" class="voice" data-icon="custom">Voice</a></li> 
+			</ul> 
+		</div> 
+	</div> 
+</div>
+<!------------end page---------->
+<!-- start page----------->
+<div id="Kitchen" data-url="" data-role="page" >
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<h1>Categories</h1>
+			
+		</div>
+		<div data-role="content" style="padding: 15px !important;color: white;">
+		<ul data-role="listview" data-inset="true">
+				<li><a name="?2on" onClick="nav(this.name)">Kitchen Light
+						On</a></li>
+				<li><a name="?2off" onClick="nav(this.name)">Kitchen Light
+						Off</a></li>
+				<li><a name="?2on" onClick="nav(this.name)">Outlet Two On</a></li>
+				<li><a name="?2off" onClick="nav(this.name)">Outlet Two Off</a></li>
+				<li><a name="?2on" onClick="nav(this.name)">Oven On</a></li>
+				<li><a name="?2off" onClick="nav(this.name)">Oven Off</a></li>
+			</ul>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b" style="position:fixed;">
+		<div data-role="navbar" class="nav-glyphish-example" data-grid="c"> 
+				<ul> 
+			      <li><a href="#Homepage" id="home" class="home" data-icon="custom">Home</a></li> 
+			    <li><a href="#listpage" id="cat" class="cat" data-icon="custom">List</a></li> 
+			  
+			    <li><a href="#Delay" id="delay" class="delay" data-icon="custom">Delay</a></li>
+			    <li><a href="#Voice" id="voice" class="voice" data-icon="custom">Voice</a></li> 
+			</ul> 
+		</div> 
+	</div> 
+</div>
+<!------------end page---------->
+<!-- start page----------->
+<div id="DiningRoom" data-url="" data-role="page" >
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<h1>Categories</h1>
+			
+		</div>
+		<div data-role="content" style="padding: 15px !important;color: white;">
+			<ul data-role="listview" data-inset="true">
+				<li><a name="?2on" onClick="nav(this.name)">Dining Room
+						Light On</a></li>
+				<li><a name="?2off" onClick="nav(this.name)">Dining Room
+						Light Off</a></li>
+				<li><a name="?2on" onClick="nav(this.name)">Outlet Three On</a></li>
+				<li><a name="?2off" onClick="nav(this.name)">Outlet Three
+						Off</a></li>
+				<li><a name="?2on" onClick="nav(this.name)">Dining Room
+						Television On</a></li>
+				<li><a name="?2off" onClick="nav(this.name)">Dining Room
+						Television Off</a></li>
+			</ul>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b" style="position:fixed;">
+		<div data-role="navbar" class="nav-glyphish-example" data-grid="c"> 
+				<ul> 
+			      <li><a href="#Homepage" id="home" class="home" data-icon="custom">Home</a></li> 
+			    <li><a href="#listpage" id="cat" class="cat" data-icon="custom">List</a></li> 
+			  
+			    <li><a href="#Delay" id="delay" class="delay" data-icon="custom">Delay</a></li>
+			    <li><a href="#Voice" id="voice" class="voice" data-icon="custom">Voice</a></li> 
+			</ul> 
+		</div> 
+	</div> 
+</div>
+<!------------end page---------->
+<!-- start page----------->
+<div id="UpstairsLanding" data-url="" data-role="page" >
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<h1>Categories</h1>
+			
+		</div>
+		<div data-role="content" style="padding: 15px !important;color: white;">
+		<ul data-role="listview" data-inset="true">
+				<li><a name="?2on" onClick="nav(this.name)">Landing Light
+						On</a></li>
+				<li><a name="?2off" onClick="nav(this.name)">Landing Light
+						Off</a></li>
+				<li><a name="?2on" onClick="nav(this.name)">Outlet Four On</a></li>
+				<li><a name="?2off" onClick="nav(this.name)">Outlet Four
+						Off</a></li>
+			</ul>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b" style="position:fixed;">
+		<div data-role="navbar" class="nav-glyphish-example" data-grid="c"> 
+			<ul> 
+			      <li><a href="#Homepage" id="home" class="home" data-icon="custom">Home</a></li> 
+			    <li><a href="#listpage" id="cat" class="cat" data-icon="custom">List</a></li> 
+			  
+			    <li><a href="#Delay" id="delay" class="delay" data-icon="custom">Delay</a></li>
+			    <li><a href="#Voice" id="voice" class="voice" data-icon="custom">Voice</a></li> 
+			</ul> 
+		</div> 
+	</div> 
+</div>
+<!------------end page---------->
+<!-- start page----------->
+<div id="Bedroom1" data-url="" data-role="page" >
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<h1>Categories</h1>
+			
+		</div>
+		<div data-role="content" style="padding: 15px !important;color: white;">
+		<ul data-role="listview" data-inset="true">
+				<li><a name="?2on" onClick="nav(this.name)">Bedroom One
+						Light On</a></li>
+				<li><a name="?2off" onClick="nav(this.name)">Bedroom One
+						Light Off</a></li>
+				<li><a name="?2on" onClick="nav(this.name)">Outlet Five On</a></li>
+				<li><a name="?2off" onClick="nav(this.name)">Outlet Five
+						Off</a></li>
+			</ul>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b" style="position:fixed;">
+		<div data-role="navbar" class="nav-glyphish-example" data-grid="c"> 
+			<ul> 
+			      <li><a href="#Homepage" id="home" class="home" data-icon="custom">Home</a></li> 
+			    <li><a href="#listpage" id="cat" class="cat" data-icon="custom">List</a></li> 
+			  
+			    <li><a href="#Delay" id="delay" class="delay" data-icon="custom">Delay</a></li>
+			    <li><a href="#Voice" id="voice" class="voice" data-icon="custom">Voice</a></li> 
+			</ul> 
+		</div> 
+	</div> 
+</div>
+<!------------end page---------->
+<!-- start page----------->
+<div id="Bedroom2" data-url="" data-role="page" >
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<h1>Categories</h1>
+			
+		</div>
+		<div data-role="content" style="padding: 15px !important;color: white;">
+		<ul data-role="listview" data-inset="true">
+				<li><a name="?2on" onClick="nav(this.name)">Bedroom Two
+						Light On</a></li>
+				<li><a name="?2off" onClick="nav(this.name)">Bedroom Two
+						Light Off</a></li>
+				<li><a name="?2on" onClick="nav(this.name)">Outlet Six On</a></li>
+				<li><a name="?2off" onClick="nav(this.name)">Outlet Six Off</a></li>
+			</ul>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b" style="position:fixed;">
+		<div data-role="navbar" class="nav-glyphish-example" data-grid="c"> 
+			<ul> 
+			      <li><a href="#Homepage" id="home" class="home" data-icon="custom">Home</a></li> 
+			    <li><a href="#listpage" id="cat" class="cat" data-icon="custom">List</a></li> 
+			  
+			    <li><a href="#Delay" id="delay" class="delay" data-icon="custom">Delay</a></li>
+			    <li><a href="#Voice" id="voice" class="voice" data-icon="custom">Voice</a></li> 
+			</ul> 
+		</div> 
+	</div> 
+</div>
+<!------------end page---------->
+<!-- start page----------->
+<div id="Bedroom3" data-url="" data-role="page" >
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<h1>Categories</h1>
+			
+		</div>
+		<div data-role="content" style="padding: 15px !important;color: white;">
+		<ul data-role="listview" data-inset="true">
+				<li><a name="?2on" onClick="nav(this.name)">Bedroom Three
+						Light On</a></li>
+				<li><a name="?2off" onClick="nav(this.name)">Bedroom Three
+						Light Off</a></li>
+				<li><a name="?2on" onClick="nav(this.name)">Outlet Seven On</a></li>
+				<li><a name="?2off" onClick="nav(this.name)">Outlet Seven
+						Off</a></li>
+			</ul>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b" style="position:fixed;">
+		<div data-role="navbar" class="nav-glyphish-example" data-grid="c"> 
+			<ul> 
+			      <li><a href="#Homepage" id="home" class="home" data-icon="custom">Home</a></li> 
+			    <li><a href="#listpage" id="cat" class="cat" data-icon="custom">List</a></li> 
+			  
+			    <li><a href="#Delay" id="delay" class="delay" data-icon="custom">Delay</a></li>
+			    <li><a href="#Voice" id="voice" class="voice" data-icon="custom">Voice</a></li> 
+			</ul> 
+		</div> 
+	</div> 
+</div>
+<!------------end page---------->
+<!-- start page----------->
+<div id="Bedroom4" data-url="" data-role="page" >
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<h1>Categories</h1>
+			
+		</div>
+		<div data-role="content" style="padding: 15px !important;color: white;">
+		<ul data-role="listview" data-inset="true">
+				<li><a name="?2on" onClick="nav(this.name)">Bedroom Four
+						Light On</a></li>
+				<li><a name="?2off" onClick="nav(this.name)">Bedroom Four
+						Light Off</a></li>
+				<li><a name="?2on" onClick="nav(this.name)">Outlet Eight On</a></li>
+				<li><a name="?2off" onClick="nav(this.name)">Outlet Eight
+						Off</a></li>
+			</ul>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b" style="position:fixed;">
+		<div data-role="navbar" class="nav-glyphish-example" data-grid="c"> 
+			<ul> 
+			      <li><a href="#Homepage" id="home" class="home" data-icon="custom">Home</a></li> 
+			    <li><a href="#listpage" id="cat" class="cat" data-icon="custom">List</a></li> 
+			  
+			    <li><a href="#Delay" id="delay" class="delay" data-icon="custom">Delay</a></li>
+			    <li><a href="#Voice" id="voice" class="voice" data-icon="custom">Voice</a></li> 
+			</ul> 
+		</div> 
+	</div> 
+</div>
+<!------------end page---------->
+<!-- start page----------->
+<div id="UtilityRoom" data-url="" data-role="page" >
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<h1>Categories</h1>
+			
+		</div>
+		<div data-role="content" style="padding: 15px !important;color: white;">
+		<ul data-role="listview" data-inset="true">
+				<li><a name="?2on" onClick="nav(this.name)">Utility Room
+						Light On</a></li>
+				<li><a name="?2off" onClick="nav(this.name)">Utility Room
+						Light Off</a></li>
+				<li><a name="?2on" onClick="nav(this.name)">Washing Machine
+						On</a></li>
+				<li><a name="?2off" onClick="nav(this.name)">Washing
+						Machine Off</a></li>
+				<li><a name="?2on" onClick="nav(this.name)">Dryer On</a></li>
+				<li><a name="?2off" onClick="nav(this.name)">Dryer Off</a></li>
+			</ul>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b" style="position:fixed;">
+		<div data-role="navbar" class="nav-glyphish-example" data-grid="c"> 
+			<ul> 
+			      <li><a href="#Homepage" id="home" class="home" data-icon="custom">Home</a></li> 
+			    <li><a href="#listpage" id="cat" class="cat" data-icon="custom">List</a></li> 
+			  
+			    <li><a href="#Delay" id="delay" class="delay" data-icon="custom">Delay</a></li>
+			    <li><a href="#Voice" id="voice" class="voice" data-icon="custom">Voice</a></li> 
+			</ul> 
+		</div> 
+	</div> 
+</div>
+<!------------end page---------->
+<!-- start page----------->
+<div id="SittingRoo2m" data-url="" data-role="page" >
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<h1>Categories</h1>
+			
+		</div>
+		<div data-role="content" style="padding: 15px !important;color: white;">
+		<ul data-role="listview" data-inset="true">
+				<li><a name="?2on" onClick="nav(this.name)">Air
+						Conditioning On</a></li>
+				<li><a name="?2off" onClick="nav(this.name)">Air
+						Conditioning Off</a></li>
+			</ul>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b" style="position:fixed;">
+		<div data-role="navbar" class="nav-glyphish-example" data-grid="c"> 
+			<ul> 
+			      <li><a href="#Homepage" id="home" class="home" data-icon="custom">Home</a></li> 
+			    <li><a href="#listpage" id="cat" class="cat" data-icon="custom">List</a></li> 
+			  
+			    <li><a href="#Delay" id="delay" class="delay" data-icon="custom">Delay</a></li>
+			    <li><a href="#Voice" id="voice" class="voice" data-icon="custom">Voice</a></li> 
+			</ul> 
+		</div> 
+	</div> 
+</div>
+<!------------end page---------->
+<!-- start page----------->
+<div id="Garden" data-url="" data-role="page" >
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<h1>Categories</h1>
+			
+		</div>
+		<div data-role="content" style="padding: 15px !important;color: white;">
+		<ul data-role="listview" data-inset="true">
+				<li><a name="?2on" onClick="nav(this.name)">Garden
+						Sprinkler System On</a></li>
+				<li><a name="?2off" onClick="nav(this.name)">Garden
+						Sprinkler System Off</a></li>
+			</ul>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b" style="position:fixed;">
+		<div data-role="navbar" class="nav-glyphish-example" data-grid="c"> 
+			<ul> 
+			      <li><a href="#Homepage" id="home" class="home" data-icon="custom">Home</a></li> 
+			    <li><a href="#listpage" id="cat" class="cat" data-icon="custom">List</a></li> 
+			  
+			    <li><a href="#Delay" id="delay" class="delay" data-icon="custom">Delay</a></li>
+			    <li><a href="#Voice" id="voice" class="voice" data-icon="custom">Voice</a></li> 
+			</ul> 
+		</div> 
+	</div> 
+</div>
+<!------------end page---------->
+<!----------------start page--------------------------->
+<div id="Delay" data-url="Delay" data-role="page">
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<h1>Delay Function</h1>
+			
+		</div>
+		<div data-role="content" style="padding: 15px !important;color: white;">
+		  <div style="color:#FFFFFF;">	Welcome to the Delay page.&nbsp;<br>Below is a full List of all
+			the controlled Items in your home with simple on and off settings as
+			well as fields for the inout of Hours ,Minutes and Seconds. Simply
+			Choose the required Scheduling time and search through the list to
+			find the switch you want.Once a switch is pressed the device will be
+			scheduled for the selected time you have chosen.<br> </br> </br></div>
+			<div data-role="fieldcontain">
+				<label for="delay1">Input Hours</label> <input type="text"
+					x-webkit-speech name="delay1" id="delay1" value="0" />
+			</div>
+			<div data-role="fieldcontain">
+				<label for="delay2">Input Minutes</label> <input type="text"
+					x-webkit-speech name="delay2" id="delay2" value="0" />
+			</div>
+			<div data-role="fieldcontain">
+				<label for="sec">Choose Seconds</label> <input type="range"
+					name="sec" id="delay3" value="0" min="0" max="1000" />
+			</div>
+		
+		<ol data-role="listview" data-inset="true" data-filter="true" id="delaylistview">
+			</br>
+			</br>
+			<li data-role="list-divider"><h3>Scheduler</h3>
+				<p>Schedule an action on a device instead</p></li>
+
+			<li><a name="?2on" onClick="myFunction(this.name)"> Front
+					Door Lock Open</a></li>
+			<li><a name="?2off" onClick="myFunction(this.name)">Front
+					Door Lock Closed</a></li>
+			<li><a name="?3on" onClick="myFunction(this.name)">Back Door
+					Lock Open</a></li>
+			<li><a name="?3off" onClick="myFunction(this.name)">Back
+					Door Lock Closed</a></li>
+			<li><a name="?4on" onClick="myFunction(this.name)">Heating
+					On</a></li>
+			<li><a name="?4off" onClick="myFunction(this.name)">Heating
+					Off</a></li>
+			<li><a name="?5on" onClick="myFunction(this.name)">Air
+					Conditioning On</a></li>
+			<li><a name="?5off" onClick="myFunction(this.name)">Air
+					Conditioning Off</a></li>
+			<li><a name="?6on" onClick="myFunction(this.name)">Switch 1
+					On</a></li>
+			<li><a name="?6off" onClick="myFunction(this.name)">Switch 1
+					Off</a></li>
+			<li><a name="?7on" onClick="myFunction(this.name)">Switch 4</a></li>
+			<li><a name="?7off" onClick="myFunction(this.name)">Switch 5</a></li>
+			<li><a name="?8on" onClick="myFunction(this.name)">Outlet 1
+					On</a></li>
+			<li><a name="?8off" onClick="myFunction(this.name)">Outlet 1
+					Off</a></li>
+			<li><a name="?9on" onClick="myFunction(this.name)">Outlet 2
+					On</a></li>
+			<li><a name="?9off" onClick="myFunction(this.name)">Outlet 2
+					Off</a></li>
+			<li><a name="?10on" onClick="myFunction(this.name)">Outlet 3
+					On</a></li>
+			<li><a name="?10off" onClick="myFunction(this.name)">Outlet
+					3 Off</a></li>
+			<li><a name="?11on" onClick="myFunction(this.name)">Outlet 4
+					On</a></li>
+			<li><a name="?11off" onClick="myFunction(this.name)">Outlet
+					4 Off</a></li>
+			<li><a name="?12on" onClick="myFunction(this.name)">Outlet 5
+					On</a></li>
+			<li><a name="?12off" onClick="myFunction(this.name)">Outlet
+					5 Off</a></li>
+			<li><a name="?13on" onClick="myFunction(this.name)">Outlet 6
+					On</a></li>
+			<li><a name="?13off" onClick="myFunction(this.name)">Outlet
+					6 Off</a></li>
+			<li><a name="?14on" onClick="myFunction(this.name)">Outlet 7
+					On</a></li>
+			<li><a name="?14off" onClick="myFunction(this.name)">Outlet
+					7 Off</a></li>
+			<li><a name="?15on" onClick="myFunction(this.name)">Outlet 8
+					On</a></li>
+			<li><a name="?15off" onClick="myFunction(this.name)">Outlet
+					8 Off</a></li>
+			<li><a name="?16on" onClick="myFunction(this.name)">Sitting
+					Room Light On</a></li>
+			<li><a name="?16off" onClick="myFunction(this.name)">Sitting
+					Room Light Off</a></li>
+			<li><a name="?17on" onClick="myFunction(this.name)">Sitting
+					Room Television On</a></li>
+			<li><a name="?17off" onClick="myFunction(this.name)">Sitting
+					Room Television Off</a></li>
+			<li><a name="?18on" onClick="myFunction(this.name)">Kitchen
+					Light On</a></li>
+			<li><a name="?18off" onClick="myFunction(this.name)">Kitchen
+					Light Off</a></li>
+			<li><a name="?19on" onClick="myFunction(this.name)">Oven On</a></li>
+			<li><a name="?19off" onClick="myFunction(this.name)">Oven
+					Off</a></li>
+			<li><a name="?20on" onClick="myFunction(this.name)">Kitchen
+					Television On</a></li>
+			<li><a name="?20off" onClick="myFunction(this.name)">Kitchen
+					Television Off</a></li>
+			<li><a name="?21on" onClick="myFunction(this.name)">Dining
+					Room Light On</a></li>
+			<li><a name="?21off" onClick="myFunction(this.name)">Dining
+					Room Light Off</a></li>
+			<li><a name="?22on" onClick="myFunction(this.name)">Dining
+					Room Television Off</a></li>
+			<li><a name="?22off" onClick="myFunction(this.name)">Landing
+					Light On</a></li>
+			<li><a name="?23on" onClick="myFunction(this.name)">Landing
+					Light Off</a></li>
+			<li><a name="?23off" onClick="myFunction(this.name)">Bedroom
+					One Light On</a></li>
+			<li><a name="?24on" onClick="myFunction(this.name)">Bedroom
+					One Light Off</a></li>
+			<li><a name="?24off" onClick="myFunction(this.name)">Bedroom
+					Two Light On</a></li>
+			<li><a name="?25on" onClick="myFunction(this.name)">Bedroom
+					Two Light Off</a></li>
+			<li><a name="?25off" onClick="myFunction(this.name)">Bedroom
+					Three Light On</a></li>
+			<li><a name="?26on" onClick="myFunction(this.name)">Bedroom
+					Three Light Off</a></li>
+			<li><a name="?26off" onClick="myFunction(this.name)">Bedroom
+					Four Light On</a></li>
+			<li><a name="?27on" onClick="myFunction(this.name)">Bedroom
+					Four Light Off</a></li>
+			<li><a name="?27off" onClick="myFunction(this.name)">Utility
+					Room Light On</a></li>
+			<li><a name="?28on" onClick="myFunction(this.name)">Utility
+					Room Light Off</a></li>
+			<li><a name="?28off" onClick="myFunction(this.name)">Washing
+					Machine On</a></li>
+			<li><a name="?29on" onClick="myFunction(this.name)">Washing
+					Machine Off</a></li>
+			<li><a name="?29off" onClick="myFunction(this.name)">Dryer
+					On</a></li>
+			<li><a name="?30on" onClick="myFunction(this.name)">Dryer
+					Off</a></li>
+			<li><a name="?30off" onClick="myFunction(this.name)">Garden
+					Sprinkler System On</a></li>
+			<li><a name="?31on" onClick="myFunction(this.name)">Garden
+					Sprinkler System Off</a></li>
+		</ol>
+	</div>
+	<div data-role="footer" data-position="fixed" data-theme="b" style="position:fixed;">
+		<div data-role="navbar" class="nav-glyphish-example" data-grid="c"> 
+			<ul> 
+			      <li><a href="#Homepage" id="home" class="home" data-icon="custom">Home</a></li> 
+			    <li><a href="#listpage" id="cat" class="cat" data-icon="custom">List</a></li> 
+			  
+			    <li><a href="#Delay" id="delay" class="delay" data-icon="custom">Delay</a></li>
+			    <li><a href="#Voice" id="voice" class="voice" data-icon="custom">Voice</a></li> 
+			</ul> 
+		</div> 
+	</div> 
+	</div>
+<!------------end page----------------------------------->
+<!------------start page--------------------------------->
+<div id="Voice" data-url="Voice" data-role="page">
+		<div data-role="header" data-position="fixed"  data-theme="b">
+			<h1 onClick="app.startVoiceRecog()">Voice Input</h1>
+			<img src="images/voice.png"  onClick="app.startVoiceRecog()" class="ui-btn-right"/>
+		</div>
+		<div data-role="content" style="padding: 15px !important;color: white;">
+			Welcome to the Voice input page.&nbsp;<br> From here you may
+			click on the microphone icon and call out one the the listed commands
+			below.Each Voice Tag corresponds to a switch and allows the user to
+			easily acces switches to be switched on with only the use of their
+			voice.<br></br> </br>
+			<div data-role="fieldcontain">
+				<label for="inp_tw150">Voice Recognition</label> <input id="speech"
+					type="text" speech="speech" x-webkit-speech="x-webkit-speech"
+					onspeechchange="test(this.value);"
+					onwebkitspeechchange="test(this.value);"
+			onkeyup="test(this.value);"
+					 />
+			</div>
+			<span style="color: #00bf00; font-size: 20px;"><strong>Voice
+					Recognition App</strong><br></span><br> <span><span
+				style="font-size: 16px;">The voice recognition in this
+					application allows the user to click the&nbsp;</span><span
+				style="font-size: 16px; line-height: 19px;">microphone</span><span
+				style="font-size: 16px;">&nbsp;icon above and simply speak
+					the device that they would like to be turned on or off ,Below is a
+					list of sample requests that will be accepted by the application.<br>Speak
+					clearly and slowly while saying one of the following:<br> <br>
+					<span style="font-size: 14px;">"Front door open"<br>"Front
+						door closed"<br>"Back door open"<br>"Back door closed"<br>
+						<span style="font-size: 14px;">"Heating on"&nbsp;<br></span></span>
+			</span></span><span style="font-size: 14px;"><span style="font-size: 14px;">"Heating
+					off"<br>
+			</span>"Air conditioning on"<br>"Air conditioning off"<br>"Outlet
+				1/2/3/4/5/6/7/8 on"<br>"Outlet 1/2/3/4/5/6/7/8 off"<br>"Sitting
+				Room Light on"<br>"Sitting Room Light off"<br>"Sitting
+				Room Television on"<br>"Sitting Room Television off"<br>"Kitchen
+				Light On"<br>"Kitchen Light Off"<br>"Oven On"<br>"Oven
+				Off"<br>"Kitchen Television On"<br>"Kitchen Television
+				Off"<br>"Dining Room Light On"<br>"Dining Room Light Off"<br>"Dining
+				Room Television On"<br>"Dining Room Television Off"<br>"Landing
+				Light On"<br>"Landing Light Off"<br>"Bedroom one Light On"<br>"Bedroom
+				one Light Off"<br>"Bedroom two Light On"<br>"Bedroom two
+				Light Off"<br>"Bedroom three Light On"<br>"Bedroom three
+				Light Off"<br>"Bedroom four Light On"<br>"Bedroom four
+				Light Off"<br>"Utility Room Light On"<br>"Utility Room
+				Light Off"<br>"Washing Machine On"<br>"Washing Machine
+				Off"<br>"Dryer On"<br>"Dryer Off"<br></span><span
+				style="font-size: 14px;">"Garden Sprinkler System On"<br>"Garden
+				Sprinkler System Off"<br> <br></span><br> <br> <strong
+				style="color: #00bf00; font-size: 18px;">Troubleshooting
+				Section:</strong><br> <br>Q."Why does my device not switch on or
+			off".<br> <br>A. If the device does not activate or
+			deactivate there may be a problem with your&nbsp;pronunciation of the
+			object,check the voice input field that shows the text that you have
+			pronounced,if it does not match the device exactly it will not
+			trigger the device.<br> <br>Q."The application does not
+			pick up on my voice correctly".<br>A.This may be for several
+			reasons.Make sure you are in a noise free environment ,some
+			background noise may be interfering with your voice input.If you are
+			using your inbuilt computer or headset microphone make sure you
+			are&nbsp;approximately one inch from the microphone and that any
+			sound generating applications that may be running are muted.
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b" style="position:fixed;">
+		<div data-role="navbar" class="nav-glyphish-example" data-grid="c"> 
+			<ul> 
+			      <li><a href="#Homepage" id="home" class="home" data-icon="custom">Home</a></li> 
+			    <li><a href="#listpage" id="cat" class="cat" data-icon="custom">List</a></li> 
+			  
+			    <li><a href="#Delay" id="delay" class="delay" data-icon="custom">Delay</a></li>
+			    <li><a href="#Voice" id="voice" class="voice" data-icon="custom">Voice</a></li> 
+			</ul> 
+		</div> 
+	</div> 
+	</div>                                                             
+<!-------------end page---------------------------------->
+  </body>
+</html>
